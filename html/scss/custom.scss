@@ -1,0 +1,293 @@
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../scss/_custom_var.scss";
+@import "../scss/_custom_mixin.scss";
+@import "../scss/main.scss";
+
+// html {
+//   scroll-behavior: smooth;
+// }
+section {margin-bottom: 50px;}
+
+html, body {
+  // height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+	font-family: '$font-regular';
+	font-weight: 300;
+	font-size: $fontsize - 76;
+	line-height: 24px;
+	color: $commantext;
+}
+
+main {
+  margin-left: 98px;
+  background-color: $white;
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.viewport_padding {
+  padding:50px;
+}
+.home_part {
+  // height: 100vh;  
+  h1 {
+    font-size: $fontsize;
+    color: $themecolors;
+    -webkit-text-fill-color: $white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $themecolors;
+    font-family: $font-bold;
+  }
+  h2 {
+    font-size: $fontsize - 45;
+    color: $themecolorsdark;
+    font-family: $font-bold;
+  }
+  h3 {
+    font-size: $fontsize - 55;
+    color: $themecolors;
+    font-family: $font-bold;
+  }
+  p {
+    color: $commantext;
+    font-size: $fontsize - 76;
+    font-family: $font-regular;
+  }
+}
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 45px 5px rgba(45,61,76,0.1);
+  -moz-box-shadow: 0px 0px 45px 5px rgba(45,61,76,0.1);
+  box-shadow: 0px 0px 45px 5px rgba(45,61,76,0.1);
+  background-color: rgba(255, 255, 255, 1);
+}
+.sliderbox-shadow {
+  -webkit-box-shadow: 0px 0px 45px 5px rgba(45,61,76,0.1);
+  -moz-box-shadow: 0px 0px 45px 5px rgba(45,61,76,0.1);
+  box-shadow: 0px 0px 45px 5px rgba(45,61,76,0.1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.slider-text {
+  position: absolute;
+  z-index: 9;
+  width: 45%;  
+}
+.slide-box {
+  width: $slidertextwidth;
+  padding: $gutter1;
+  // height: calc(480px - 50px);
+}
+.overflow-visible {overflow: visible;}
+.slider-img {
+  width: 50%;
+  float: right;
+}
+// .btn-outline-primary {
+//   @include button-outline-variant($themecolors, #fff, lighten($themecolors,5%), $white);
+// }
+.card, .btn, .form-control { border-radius: 0; }
+.btn-outline-primary.custom-btn {
+  border-color: $themecolors;
+  color: $themecolorsdark;
+  font-family: $font-bold;
+  background-color: $white;
+}
+.btn {
+  font-size: $fontsize - 75;
+}
+.indicators-dot {
+  width: 25%;
+  li {    
+    width: 10px;
+    height: 10px;
+    background-color: $themecolorsdark;
+    border-radius: 100%;
+    opacity: 1;
+    border: solid 5px transparent;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  li.active {
+    background-color: $white;
+    border: solid 5px $themecolors;
+    -webkit-box-shadow: 0px 0px 0px 5px rgba(6,144,176,0.2);
+    -moz-box-shadow: 0px 0px 0px 5px rgba(6,144,176,0.2);
+    box-shadow: 0px 0px 0px 5px rgba(6,144,176,0.2);
+    transition: box-shadow 0.5s ease-in 0.3s;
+  }
+}
+
+h1 {
+  font-size: $fontsize - 45;
+  color: $themecolors;
+  font-family: $font-bold;
+}
+h2 {
+  font-size: $fontsize - 55;
+  color: $themecolors;
+  font-family: $font-bold;
+}
+h3 {
+  font-size: $fontsize - 55;
+  color: $themecolorsdark;
+  font-family: $font-bold;
+}
+h4 {
+  font-size: $fontsize - 60;
+  color: $commantext;
+  font-family: $font-light;
+}
+.aboutpartabs h4 span {
+  font-size: $fontsize - 40;
+  color: $themecolorsdark;
+  font-family: $font-bold;
+}
+p {
+  color: $commantext;
+  font-size: $fontsize - 76;
+  font-family: $font-regular;
+}
+
+.aboutpartabs {
+  position: absolute;
+  right: 30px;
+  z-index: 9;
+  width: 52%;
+  padding: $gutter1;
+}
+// Product part
+.product_part {
+  h4 {
+    font-size: $fontsize - 60;
+    color: $commantext;
+    font-family: $font-light;
+    span {
+      font-family: $font-bold;
+    }
+  }
+  .logo_product {
+    border: solid 2px $lightgray;
+  }
+}
+// Clients part
+.clients_part {
+  .logo_bodr { border: solid 2px $lightgray;}
+}
+// Career part
+.career_part {
+  h4 {
+    font-size: $fontsize - 66;
+    color: $commantext;
+    font-family: $font-light;
+    span {
+      font-family: $font-bold;
+    }
+  }
+  .opening_details {
+    h3 {
+      font-size: $fontsize - 70;
+      font-family: $font-bold;
+      color: $themecolors;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        font-family: $font-regular;
+        font-size: $fontsize - 76;
+        color: $themecolorsdark;
+        list-style-type: none;
+        span {
+          font-family: $font-bold;
+        }
+      }
+    }
+  }
+}
+// Contact part
+.contact_part {
+  .form-control {
+    border: solid 1px #f0f0f0;
+    font-size: $fontsize - 74;
+    font-family: $font-regular;
+    color: $commantext;
+  }
+  .contact_details {
+    h3 {
+      font-size: $fontsize - 70;
+      font-family: $font-bold;
+      color: $themecolors;
+    }
+    p{
+      line-height: normal;
+    }
+  }
+  .map-responsive{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+  }
+  .map-responsive iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+  }
+}
+// Aerosol Life part
+.aerosollife_part {
+  h4 span {font-family: $font-bold;}
+}
+
+// Loading Part
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -75px 0 0 -75px;
+  border: 4px solid $lightgray;
+  border-radius: 50%;
+  border-top: 4px solid $themecolors;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+#myDiv {
+  display: none;
+}
